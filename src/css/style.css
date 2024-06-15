@@ -1,0 +1,245 @@
+@charset "UTF-8";
+@import url("./reset.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+
+:root{
+    --app-font-general:'Outfit', sans-serif;
+    --body-bg-colour: #1b1b24;
+    --card-bg-colour:#23232f;
+    --white-bg-colour:#fff;
+    --inputs-bg-colour:#2c2c3a;
+    --btn-bg-colour:#008b8b;
+    --background-input:rgb(255, 255, 255, 6%);
+}
+
+main{
+    height: 100dvh;
+}
+
+body{
+    background-color: var(--body-bg-colour);
+    font-family: var(--app-font-general);
+    color: var(--white-bg-colour);
+}
+
+
+figure{
+    width: 180px;
+    height: 180px;
+}
+
+.container{
+    width: min(100% - 30px,1080px);
+    margin-inline:auto;
+    height: 100%;
+
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    height: 100%;
+    background-color: rgb(27, 27, 36);
+    position: relative;
+}
+
+
+form{
+    margin-top: 20px;
+
+    input[type='text']{
+        background-color: rgba(255, 255, 255,6%); 
+        color: var(--white-bg-colour);
+        height: 45px;
+        width: 400px;
+        padding: 0 20px; 
+        border-radius: 28px; 
+        letter-spacing: 0.2em;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    input[type='text']:focus{
+        border: 0.5px solid var(--btn-bg-colour);
+    }
+}
+
+p{
+    color: var(--white-bg-colour);
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.spinner{
+    position: absolute;
+    bottom: 29%;
+}
+.spinner i{
+    color: var(--white-bg-colour);
+    font-size: 3rem;
+}
+
+.task-card{
+    background-color: var(--background-input);
+    width: 400px;
+    height: 350px;
+    position: relative;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    transition: all 2s ease-in-out;
+    border-radius: 20px;  
+    padding: 20px;
+  
+    a{
+      margin-top: 20px;
+      padding: 0 18px;
+      height: 45px;
+      line-height: 45px;
+    text-decoration: none;
+      font-size: 2rem;
+      background-color: var(--btn-bg-colour);
+      border-radius: 10px;
+      color: var(--white-bg-colour);
+    }
+  }
+  
+  .task-card::backdrop{
+    background-color:var(--body-bg-colour);
+  }
+  
+  .task-card i{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    height: 20px;
+    width: 20px;
+    border-radius:  50%;
+    text-align: center;
+    cursor: pointer;;
+    color: var(--white-bg-colour);
+  
+  }
+
+  .task-card .main-icon{
+    color: var(--white-bg-colour);
+    position: initial;
+    font-size: 15rem;
+    height: 140px;
+    width: 200px;
+  }
+
+  .task-card p{
+    color: var(--white-bg-colour);
+    font-size: 2.5rem;
+    margin-top: 10px;
+  }
+
+  
+  .visible{
+    transform: translate(-50%, -50%);    
+  }
+  
+  .user-info-sect{
+    height: 480px;
+    figure img{
+        border-radius: 50%;
+    }
+    h2{
+        font-size: 4rem;
+        margin-top: 10px;
+    }
+    ul{
+        width: 350px;
+        display: flex;
+        list-style: none;
+        ul li{
+            display: inline;
+            text-align: center;
+
+        }
+    }
+  }
+
+  .user-follow-info-list li p{
+    text-align: center;
+    margin-right: 30px;
+    height: 25px;
+  }
+  .user-follow-info-list li .value{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--btn-bg-colour);
+  }
+
+  .git-url{
+    padding: 12px 20px;
+    background-color: var(--white-bg-colour);
+    color: var(--btn-bg-colour);
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.7rem;
+    margin-top: 30px;
+    font-weight: 600;
+  }
+
+  h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+ .user-repos-sect{
+  height: 390px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+
+  ul{
+    height: 100%;
+    
+    li{
+      background-color: var(--background-input);
+      margin-bottom: 10px;
+      padding: 10px 20px  10px 30px;
+      position: relative;
+      height: 90px;
+
+      p{
+        position: absolute;
+      }
+
+      .repo-update-date{
+
+         top: 0%;
+         right: 3%;
+         font-size: 15px;
+      }
+
+      .repo-name{
+        position: absolute;
+        font-size: 2rem;
+        top: 15%;
+        font-weight: 600;
+        color: var(--btn-bg-colour);
+        text-decoration: none;
+      }
+
+      .repo-desc{
+        bottom: 20%;
+        font-size: 17px;
+      }
+
+    }
+  }
+ }
+
+  .user-repos-sect  .not-found{
+  font-size: 2rem;
+  height: 90px;
+  padding: 30px;
+
+ }
